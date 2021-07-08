@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2-create-table-city
+      author: Marta_Viarenchykava
+      changes:
+        - createTable:
+            tableName: city
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: text
+                  constraints:
+                    nullable: false

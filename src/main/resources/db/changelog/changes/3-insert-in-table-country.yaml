@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3-insert-in-table-country
+      author: Marta_Viarenchykava
+      changes:
+        - insert:
+            tableName: country
+            columns:
+              - column:
+                  name: name
+                  value: USA
+        - insert:
+            tableName: country
+            columns:
+              - column:
+                  name: name
+                  value: Albania

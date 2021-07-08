@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4-add-foreign-key-table-city
+      author: Marta_Viarenchykava
+      changes:
+      - addColumn:
+            tableName: city
+            columns:
+                - column:
+                    name: country_id
+                    type: bigserial
+      - addForeignKeyConstraint:
+          baseColumnNames: country_id
+          baseTableName: city
+          constraintName: fk_city_country
+          referencedColumnNames: id
+          referencedTableName: country
+          deferrable: true
+          initiallyDeferred: true
+          onUpdate: RESTRICT
